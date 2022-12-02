@@ -1,0 +1,13 @@
+.cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 60vh;
+}
+
+.total-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

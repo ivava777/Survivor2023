@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="button-wrapper">
+    <button mat-icon-button color="primary" aria-label="Login" *ngIf="!isAuthenticated" (click)="login()"
+            class="auth-btn">
+      <mat-icon>power_settings_new</mat-icon>
+      Login
+    </button>
+    <button mat-button *ngIf="isAuthenticated" (click)="logout()" class="auth-btn">
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+  </div>
+  <div class="filler">
+    <h1 class="header-title">
+      Survivior 2023
+    </h1>
+  </div>
+  <div class="cart button-wrapper">
+    <button mat-fab color="accent" aria-label="Shopping cart" (click)="openCart()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,20 @@
+<mat-card class="product-card">
+  <mat-card-content>
+    <div class="content-wrapper">
+      <div>
+        <h4>
+          {{title}}
+        </h4>
+        <p>Status: {{status}}</p>
+        <p><b>{{price  | currency:'UAH':'':'.2-2'}} UAH</b></p>
+      </div>
+      <img mat-card-sm-image [src]="image">
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button color="primary" (click)="addToCart()" [disabled]="status !== ProductStatus.available">
+      <mat-icon>add_shopping_cart</mat-icon>
+      Add to cart
+    </button>
+  </mat-card-actions>
+</mat-card>

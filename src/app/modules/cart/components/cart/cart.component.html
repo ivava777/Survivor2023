@@ -1,0 +1,29 @@
+<mat-card class="cart-wrapper">
+  <mat-card-content>
+    <h3>Your shopping cart</h3>
+    <div *ngIf="!!cartProducts.length; else noData">
+      <div *ngFor="let cartItem of cartProducts">
+        <app-cart-item
+          [cartItem]="cartItem"
+          (increaseEvent)="increaseHandler($event)"
+          (decreaseEvent)="decreaseHandler($event)"
+        ></app-cart-item>
+      </div>
+      <mat-card>
+        <mat-card-content class="total-wrapper">
+          <div>Total</div>
+          <div>{{cartTotal.amount | currency:'UAH':'':'.2-2'}} UAH</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="primary" type="button" (click)="goToProducts()">
+      Back to products
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<ng-template #noData>
+  <h4>Cart is empty</h4>
+</ng-template>

@@ -1,0 +1,14 @@
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: auto 80px;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .product-item {
+    margin: 1rem;
+  }
+}

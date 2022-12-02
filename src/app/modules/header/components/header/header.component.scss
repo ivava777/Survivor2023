@@ -1,0 +1,22 @@
+.filler {
+  flex: 1 1 auto;
+
+  .header-title {
+    display: flex;
+    justify-content: center;
+
+    .main-title {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.button-wrapper {
+  width: 10%;
+}
+
+.auth-btn {
+  display: flex;
+  align-items: center;
+}

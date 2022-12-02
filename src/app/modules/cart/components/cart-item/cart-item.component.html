@@ -1,0 +1,25 @@
+<mat-card class="product-card">
+  <mat-card-content>
+    <div class="content-wrapper">
+      <img mat-card-sm-image [src]="cartItem?.item?.image">
+      <div>
+        <h4>
+          {{cartItem?.item?.title}}
+        </h4>
+        <p><b>{{cartItem?.item?.price | currency:'UAH':'':'.2-2'}} </b> X <b>{{cartItem?.qty}}</b></p>
+        <p><b>{{cartItem?.amount | currency:'UAH':'':'.2-2'}}</b></p>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button color="primary" (click)="decrease()">
+      <mat-icon>remove_shopping_cart</mat-icon>
+      -
+    </button>
+    <button mat-button color="primary" (click)="increase()">
+      <mat-icon>add_shopping_cart</mat-icon>
+      +
+    </button>
+  </mat-card-actions>
+</mat-card>
+
