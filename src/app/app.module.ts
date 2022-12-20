@@ -20,6 +20,7 @@ import { HeaderModule } from './modules/header/header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './modules/products/products.module';
 import { CartModule } from './modules/cart/cart.module';
+import { OrdersModule } from './modules/orders/orders.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,6 +37,7 @@ import { CartModule } from './modules/cart/cart.module';
     HeaderModule,
     ProductsModule,
     CartModule,
+    OrdersModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

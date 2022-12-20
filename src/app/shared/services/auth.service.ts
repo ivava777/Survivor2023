@@ -124,4 +124,8 @@ export class AuthService {
       this.router.navigate(['sign-in']);
     });
   }
+
+  getCurrentEmail(): string | undefined {
+    return this.currentUser.value?.email;
+  }
 }

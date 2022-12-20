@@ -4,6 +4,7 @@
   .header-title {
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     .main-title {
       text-decoration: none;
@@ -19,4 +20,10 @@
 .auth-btn {
   display: flex;
   align-items: center;
+}
+
+.btn-wrapper {
+  button {
+    margin: auto 1rem;
+  }
 }

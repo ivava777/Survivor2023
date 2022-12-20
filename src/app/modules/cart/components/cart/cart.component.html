@@ -16,10 +16,16 @@
         </mat-card-content>
       </mat-card>
     </div>
+    <div *ngIf="!!status">
+      {{status}}
+    </div>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button color="primary" type="button" (click)="goToProducts()">
       Back to products
+    </button>
+    <button mat-button color="primary" type="button" [disabled]="isCreationOrderDisabled()" (click)="createOrder()">
+      Create Order
     </button>
   </mat-card-actions>
 </mat-card>

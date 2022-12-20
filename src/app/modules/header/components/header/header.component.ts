@@ -40,4 +40,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   openCart() {
     this.router.navigate(['cart']);
   }
+
+  openOrders() {
+    this.router.navigate(['orders']);
+  }
+
+  openProducts() {
+    this.router.navigate(['products']);
+  }
 }

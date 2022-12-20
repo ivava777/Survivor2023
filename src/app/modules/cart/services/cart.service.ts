@@ -89,4 +89,9 @@ export class CartService {
     });
     this.cartTotal.next({ amount, qty });
   }
+
+  clearAll() {
+    this.cartProducts.next([]);
+    this.cartTotal.next({ amount: 0, qty: 0 });
+  }
 }
