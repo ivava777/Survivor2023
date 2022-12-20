@@ -20,4 +20,11 @@ export class ProductsService {
   public getProductsObservable(): Observable<ProductModel[]> {
     return this.products.asObservable();
   }
+
+  public getProduct(id: number): ProductModel | null {
+    if (!this.products.value.length) {
+      this.fetchProducts();
+    }
+    return this.products.value.find((item) => item.id === id) ?? null;
+  }
 }
